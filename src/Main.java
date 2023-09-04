@@ -1,17 +1,38 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Random random = new Random();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            Set<Integer> hashSet = new HashSet<>();
+            Set<Integer> linkedHashSet = new LinkedHashSet<>();
+            Set<Integer> treeSet = new TreeSet<>();
+
+        for (int i = 0; i < 1000; i++) {
+            int randomNumber = random.nextInt(50) + 1;
+            hashSet.add(randomNumber);
+            linkedHashSet.add(randomNumber);
+            treeSet.add(randomNumber);
         }
+
+             System.out.println("HashSet:");
+                for (Integer number : hashSet) {
+                  System.out.print(number + " ");
+        }
+                System.out.println("\n\nLinkedHashSet:");
+                for (Integer number : linkedHashSet) {
+                 System.out.print(number + " ");
+        }
+
+                 System.out.println("\n\nTreeSet:");
+                for (Integer number : treeSet) {
+                 System.out.print(number + " ");
+        }
+
+
+
+
+
     }
 }
